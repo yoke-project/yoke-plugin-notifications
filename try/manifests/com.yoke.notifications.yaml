@@ -1,0 +1,41 @@
+manifest: 1
+id: com.yoke.notifications
+protocol: 1
+streams:
+  - id: notifications.list
+    tolerates_loss: true
+commands:
+  - id: notifications.dismiss
+  - id: notifications.dismiss.all
+  - id: notifications.invoke
+  - id: notifications.seen
+  - id: notifications.dnd.set
+queries:
+  - id: notifications.list
+occurrences:
+  - id: notifications.received
+capabilities:
+  - name: query.notifications.list.answer
+    governs:
+      query: notifications.list
+  - name: command.notifications.dismiss.accept
+    governs:
+      command: notifications.dismiss
+  - name: command.notifications.dismiss.all.accept
+    governs:
+      command: notifications.dismiss.all
+  - name: command.notifications.invoke.accept
+    governs:
+      command: notifications.invoke
+  - name: command.notifications.seen.accept
+    governs:
+      command: notifications.seen
+  - name: command.notifications.dnd.set.accept
+    governs:
+      command: notifications.dnd.set
+  - name: stream.notifications.list.publish
+    governs:
+      stream: notifications.list
+  - name: event.notifications.received.report
+    governs:
+      occurrence: notifications.received

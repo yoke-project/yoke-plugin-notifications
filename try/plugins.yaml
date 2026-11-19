@@ -1,0 +1,8 @@
+plugins:
+  - id: com.yoke.notifications
+    unit: notifications
+    source: ..
+    tag: null
+    arch: x86_64
+    digest: sha256:18e076cd8e6943c7071cb04a6a61b1c802b452661197ab5c6881cd792c6d1035
+    taken: 2026-11-19T21:02:30Z

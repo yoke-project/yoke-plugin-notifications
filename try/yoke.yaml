@@ -1,0 +1,15 @@
+model: 1
+id: com.yoke.notify-try
+version: 0.1.0
+arch: x86_64
+core: ">=0.16.0"
+channels:
+  panel:
+    transport: local
+    clients: single
+units:
+  notifications:
+    kind: plugin
+    plugin: com.yoke.notifications
+    exec: components/plugins/notifications
+    digest: sha256:9532d60a9046e9659d809a3553a1189d00ebc6131670104d27dbd870a71219db
